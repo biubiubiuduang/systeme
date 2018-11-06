@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script type="text/javascript">
+			$(function(){		
+				$('.yc').hover(function(){
+					$(this).find('.yinc').animate({'height':$(this).find('.yinc li').size()*$('.yinc li').height()+30}).animate({'height':$(this).find('.yinc li').size()*$('.yinc li').height()},100)
+				},function(){
+					$(this).find('.yinc').animate({'height':0})
+				})
+				
+				$('.yinc').find('li').mouseover(function(){
+					$(this).animate({'left':10}).animate({'left':0})
+					$(this).find('i').show()
+				})				
+				$('.yinc').find('li').mouseout(function(){
+					$(this).find('i').hide()
+				})	
+						
+				$('.celan1').click(function(){
+					$("html,body").animate({scrollTop:0})
+				})	
+			})
+		</script>
+		
+		<!-- 1.鼠标经过时需要出现小白点
+		2.点击时除了当前显示，其他的都消失
+		3.鼠标经过时，下拉菜单出现抖动效果
+		4.鼠标经过下拉菜单的列表时，对应的文字会有一个向右的平移 -->
+		<script>
+		/**
+		 * 1.鼠标经过时出现小白点
+		 * 2.点击时除了当前的其余都消失
+		 * 3.鼠标经过时 下拉菜单不限抖动效果
+		 * 4.鼠标经过 下拉菜单出现一个像右平移的效果
+		 */
+// 		$(function () {
+// 			$(".nav .jHove").hover(function () {
+// 				$(this).find("div").stop().slideDown(700, "elasticOut")
+// 			},function(){
+// 				$(this).find("div").stop().slideUp();
+// 			})
+// 			$(".nav .jHove .slideMenu a").hover(function(){
+// 				$(this).css("background","skyblue").find("span").show().end().animate({paddingLeft: "33px"})
+// 			},function(){
+// 				$(this).stop(true).css("background","").find("span").hide().end().animate({paddingLeft: "23px"})
+// 			})
+// 
+// 		})
+	</script>
+		
+	</head>
+	<body>
+		<!-- 头部导航栏 -->
+		<div id="head">
+			<div class="head-con">
+				<a href="javascript:;"><img src="img/logo.png"></a>
+				<ul id="box">
+					<li><a href="javascript:;">
+							首页
+						</a></li>
+					<li class="yc"><a href="javascript:;">
+							小鸟掌学
+							<i></i>
+						</a>
+						<ul class="yinc">
+							<li>小鸟掌学主页 <i>></i></li>
+							<li>小鸟掌学概述 <i>></i></li>
+							<li>对企业的价值 <i>></i></li>
+							<li>小鸟掌学 <i>></i></li>
+							<li>微课联盟 <i>></i></li>
+							<li>App下载 <i>></i></li>
+						</ul>
+					</li>
+					<li><a href="javascript:;">
+							小鸟动态
+						</a></li>
+					<li class="yc"><a href="javascript:;">
+							企业文化
+							<i></i>
+						</a>
+						<ul class="yinc">
+							<li>公司理念 <i>></i></li>
+							<li>公司文化 <i>></i></li>
+							<li>公司氛围 <i>></i></li>
+						</ul>
+					</li>
+					<li class="yc"><a href="javascript:;">
+							人力资源
+							<i></i>
+						</a>
+						<ul class="yinc">
+							<li>人才理念 <i>></i></li>
+							<li>团队介绍 <i>></i></li>
+							<li>招聘信息 <i>></i></li>
+						</ul>
+					</li>
+					<li><a href="javascript:;">
+							联系我们
+						</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- banner图 -->
+		<div class="banner">
+			<img src="img/bbbb_02.png" >
+		</div>
+		<!-- 公司简介 -->
+		<div class="content1">
+			<div class="con1">
+				<div class="con1-top">
+					<img src="img/goOn_icon01.png">
+				</div>
+				<p class="jianjie">公司简介</p>
+				<p class="jjyingwen">About <span>Company</span></p>
+				<p class="jjdian">
+					<i></i>
+					<i></i>
+					<i></i>
+				</p>
+				<div class="con1-btm">
+					<div class="con1-btm-tiao"></div>
+					
+					
+					<div class="con1-btm-right">
+						<div class="con1-btm-pic"></div>
+						<div class="con1-btm-con">
+							<div class="con1-btm-con1">
+								<p>概述</p>
+								<div class="tiao1"></div>
+								<div class="maobi"></div>
+							</div>
+							<div class="con1-btm-con2">
+								<div class="xiaoniao"></div>
+								<div class="gaishu">
+									<span>概述</span>
+									<p>翡翠学院，起源服务于专业技术人员继续教育基地的在线培训平台，受到客户与社会的密切关注与欢迎。卓新思创有限责任公司负责翡翠掌学的运营、推广和研发等工作。</p>
+								</div>
+								<a class="con1-btm-con2a1" href="javascript:;"><img src="img/prev_jiantou.png"></a>
+								<a class="con1-btm-con2a2" href="javascript:;"><img src="img/next_jiantou.png"></a>
+							</div>
+							<div class="con1-btm-con3">
+								<p>我们的愿景：成为中国最强、最大的中小微企业定制在线学习服务提供商！</p>
+								<p>我们做的是“新学习，新媒体”！</p>
+								<p>帮助企业建立自己的企业学校，实现：全民全学、全民全校、全民全智（比拼式学习）！</p>
+								<div class="con1-btm-con3pic2">
+									<i></i>
+									<img src="img/banner01_01.png">
+									<span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+				<div class="con1-bolang"></div>
+			</div>
+		</div>
+		<!-- 主要产品 -->
+		<div class="content2">
+			<div class="con2">
+				<p class="jianjie">主要产品</p>
+				<p class="jjyingwen">Our <span>Works</span></p>
+				<p class="jjdian">
+					<i></i>
+					<i></i>
+					<i></i>
+				</p>
+				<a class="con2-tu" href="javascript:;"><img src="img/1175612.png" ></a>
+					<div class="con1-btm con2-btm">
+						<div class="con1-btm-tiao"></div>
+						<div class="con1-btm-pic con2-btm-pic"></div>
+						<div class="con1-btm-con con2-btm-con">
+							<div class="con1-btm-con1">
+								<p>翡翠学院教育系统</p>
+								<div class="tiao1"></div>
+								<div class="maobi"></div>
+							</div>
+							<div class="con1-btm-con2">
+								<div class="xiaoniao"></div>
+								<div class="gaishu">
+									<span>概述</span>
+									<p>翡翠学院，起源服务于专业技术人员继续教育基地的在线培训平台，受到客户与社会的密切关注与欢迎。卓新思创有限责任公司负责翡翠掌学的运营、推广和研发等工作。</p>
+								</div>
+								<a class="con1-btm-con2a1" href="javascript:;"><img src="img/prev_jiantou.png"></a>
+								<a class="con1-btm-con2a2" href="javascript:;"><img src="img/next_jiantou.png"></a>
+							</div>
+							<div class="con1-btm-con3">
+								<p>我们的愿景：成为中国最强、最大的中小微企业定制在线学习服务提供商！</p>
+								<p>我们做的是“新学习，新媒体”！</p>
+								<p>帮助企业建立自己的企业学校，实现：全民全学、全民全校、全民全智（比拼式学习）！</p>
+								<div class="con1-btm-con3pic2 con1-btm2">
+									<i></i>
+									<img src="img/banner01_01.png">
+									<span></span>
+								</div>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+		<!-- 业务范围 -->
+		<div class="content3">
+			<div class="con3">
+				<div class="con3-logo"></div>
+				<p class="jianjie">业务范围</p>
+				<p class="jjyingwen">Business <span>Scope</span></p>
+				<p class="jjdian">
+					<i></i>
+					<i></i>
+					<i></i>
+				</p>
+				<div class="con3-main1">
+					<div class="con3-main1-a">01</div>
+					<div class="con3-main1-b">
+						<p class="con3-wenz">企业培训平台</p>
+						<p class="con3-wenz2">Enterprise training platform</p>
+					</div>
+					<div class="con3-main1-c"></div>
+					<div class="con3-main1-d">
+						<p>我们的愿景：成为中国最强、最大的中小微企业定制在线学习服务提供商！</p>
+						<p>我们做的是“新学习，新媒体”！</p>
+					</div>
+					<div class="con3-main1-f"></div>
+				</div>
+				<div class="con3-main1 con3-main2">
+					<div class="con3-main1-a">02</div>
+					<div class="con3-main1-b">
+						<p class="con3-wenz">翡翠学院云服务</p>
+						<p class="con3-wenz2">cloud services</p>
+					</div>
+					<div class="con3-main1-c con3-main1-c2"></div>
+					<div class="con3-main1-d">
+						<p>我们的愿景：成为中国最强、最大的中小微企业定制在线学习服务提供商！</p>
+						<p>我们做的是“新学习，新媒体”！</p>
+					</div>
+					<div class="con3-main1-f con3-main1-f2"></div>
+				</div>
+			
+				<p class="con3-p1"> “翡翠学院”云平台是一套完整的专家知识、学习管理、监督考核系统。首先根据企业和员工的特性，抓取学习需求，然后从“平台学习库、行业学习库和企业内训库”中调出教学资源，按学习计划“推送”任务给每一位员工，并对学习过程进行监管，对学习效果进行评估，根据学习情况调整学习计划，不断优化员工的职业生涯</p>
+				<p class="con3-p1">“翡翠学院”主要是基于智能手机平台进行学习。针对性，趣味性，创造性的学习方式有助于员工建立学习兴趣，将学习与趣味相结合，提高学习提高率。提升员工技能，增加企业效益。</p>
+			
+				<p class="con3-p"><i></i>“翡翠学院”云平台是企业战略变革的工具</p>
+				<p class="con3-p"><i></i>“翡翠学院”云平台是企业文化重要的组成部分</p>
+				<p class="con3-p"><i></i>“翡翠学院”云平台是企业培训的重要支撑手段和实施保障机制</p>
+				<p class="con3-p"><i></i>“翡翠学院”云平台是企业上下游意识形态统一的桥梁</p>
+				<p class="con3-p"><i></i>“翡翠学院”云平台是企业经验分享的平台</p>
+			
+				<div class="con3-main1">
+					<div class="con3-main1-a">03</div>
+					<div class="con3-main1-b  con3-wenz3">
+						<p class="con3-wenz">企业培训课程内容提供</p>
+						<p class="con3-wenz2">Enterprise training course</p>
+					</div>
+					<div class="con3-main1-c con3-main1-c3"></div>
+					<div class="con3-main1-d">
+						<p>我们的愿景：成为中国最强、最大的中小微企业定制在线学习服务提供商！</p>
+						<p>我们做的是“新学习，新媒体”！</p>
+					</div>
+					<div class="con3-main1-f"></div>
+				</div>
+				
+				<div class="con3-main3">
+					<div class="con3-logo con3-logo2"></div>
+					<p class="jianjie">团队介绍</p>
+					<p class="jjyingwen">Our <span>Team</span></p>
+					<p class="jjdian">
+						<i></i>
+						<i></i>
+						<i></i>
+					</p>
+					
+					<div class="con3-main3-a">
+						<img src="img/team_img02.png" class="con3-main3-aimg">
+						<p class="con3-main3-ap">十年Java开发经验，精通各种java框架，对于前端也有深刻的研究，在工作中是一个十足的逗比。</p>
+						<a class="con3-main3-a1" href="javascript:;">翼神</a>
+						<a class="con3-main3-a2" href="javascript:;">高级Java工程师</a>
+						<a class="con3-main3-a3" href="javascript:;"></a>
+						<div class="con3-main3-a4">
+							<a href="javascript:;"><img src="img/wx_03.png"></a>
+							<a href="javascript:;"><img src="img/yyb_05.png"></a>
+							<a href="javascript:;"><img src="img/dd_07.png"></a>
+							<a href="javascript:;"><img src="img/vv_09.png"></a>
+						</div>
+					</div>
+					<div class="con3-main3-a con3-main3-b">
+						<img src="img/team_img03.png" class="con3-main3-aimg">
+						<p class="con3-main3-ap">牛逼的前端工程师，牛逼的设计师，伪文艺青年一枚。</p>
+						<a class="con3-main3-a1" href="javascript:;">天天</a>
+						<a class="con3-main3-a2" href="javascript:;">前端工程师/设计</a>
+						<a class="con3-main3-a3" href="javascript:;"></a>
+						<div class="con3-main3-a4">
+							<a href="javascript:;"><img src="img/wx_03.png"></a>
+							<a href="javascript:;"><img src="img/yyb_05.png"></a>
+							<a href="javascript:;"><img src="img/dd_07.png"></a>
+							<a href="javascript:;"><img src="img/vv_09.png"></a>
+						</div>
+					</div>	
+				</div>
+				
+				<div class="con3-main5">
+					<a href="javascript:;"><img src="img/prev_jiantou.png" ></a>
+					<div class="xian"><img src="img/next&prev_line.png" ></div>
+					<a href="javascript:;"><img src="img/next_jiantou.png" ></a>
+					<div class="dian">
+						<a href="javascript:;"><img src="img/next&prev_now.png" ></a>
+						<a href="javascript:;"><img src="img/next&prev_others.png" ></a>
+						<a href="javascript:;"><img src="img/next&prev_others.png" ></a>
+					</div>
+				</div>
+				
+				<div class="con3-main4"><img src="img/map_topimg.png" ></div>
+			</div>
+		</div>
+		<!-- 合作机构 -->
+		<div class="content4">
+			<div class="con4">
+				<p class="jianjie">合作机构</p>
+				<p class="jjyingwen">Our <span>Partners</span></p>
+				<p class="jjdian">
+					<i></i>
+					<i></i>
+					<i></i>
+				</p>
+				<div class="con4-main">
+					<div class="con4-main-a">
+						<p class="jianjie jianjie2">合作机构</p>
+						<p class="jjyingwen jjyingwen2">Our <span>Partners</span></p>
+					
+						<div class="con4-main-abtm">
+							<a href="javascript:;"><img src="img/pLogo01.png" ></a>
+							<a href="javascript:;"><img src="img/pLogo02.png" ></a>
+							<a href="javascript:;"><img src="img/pLogo03.png" ></a>
+							<a href="javascript:;"><img src="img/pLogo04.png" ></a>
+							<a href="javascript:;"><img src="img/pLogo05.png" ></a>
+							<a href="javascript:;"><img src="img/pLogo06.png" ></a>
+						</div>
+					</div>
+					<div class="con4-main-a con4-main-b">
+						<p class="jianjie jianjie2">用户</p>
+						<p class="jjyingwen jjyingwen2">3000+</p>
+					
+						<div class="con4-main-abtm">
+							<a href="javascript:;"><img src="img/uLogo01.png" ></a>
+							<a href="javascript:;"><img src="img/uLogo02.png" ></a>
+							<a href="javascript:;"><img src="img/uLogo03.png" ></a>
+							<a href="javascript:;"><img src="img/uLogo04.png" ></a>
+							<a href="javascript:;"><img src="img/uLogo05.png" ></a>
+							<a href="javascript:;"><img src="img/uLogo06.png" ></a>
+							<a href="javascript:;"><img src="img/uLogo07.png" ></a>
+							<a href="javascript:;"><img src="img/uLogo08.png" ></a>
+						</div>
+						
+						<a href="javascript:;"></a>
+					</div>
+					<div class="con4-btmg"><img src="img/hezuo_bottombg.png" ></div>
+				</div>
+			</div>
+		</div>
+		<!-- 联系我们 -->
+		<div class="content5">
+			<div class="con5">
+				<p class="jianjie">联系我们</p>
+				<p class="jjyingwen">Contact <span>Us</span></p>
+				<p class="jjdian">
+					<i></i>
+					<i></i>
+					<i></i>
+				</p>
+				
+				<div class="con5-main">
+					<div class="con5-m1">
+						<i class="con5-main1"><img src="img/eee.png" ></i><input type="text" value="名字" class="con5-main-ipt1" /><span>*</span>
+					</div>
+					<div class="con5-m1">
+						<i class="con5-main1"><img src="img/www.png" ></i><input type="text" value="邮箱" class="con5-main-ipt1" /><span>*</span>
+					</div>
+					<div class="con5-m1">
+						<i class="con5-main1"><img src="img/rrr.png" ></i><input type="text" value="联系电话" class="con5-main-ipt1" />
+					</div>
+					<div class="con5-m1 con5-m2">
+						<i class="con5-main1 con5-main2"><img src="img/eee.png" ></i>
+						<input type="text" value="" class="con5-main-ipt2" />
+						<span>说点什么吧<i>*</i></span>
+					</div>
+					<div class="con5-m3">
+						<p><i>* </i>亲，留言的时候，要请留下你的姓名和联系方式哦</p>
+						<span>谢谢你的留言，我们将及时回复！</span>
+						<img src="img/oop_03.png">
+					</div>
+					<div class="con5-mm">
+						<div class="con5-mm1">
+							<div class="con5-mm1-img"><img src="img/lianxi_icon01.png" ></div>
+							<div class="con5-mm1-cent">
+								<span>地址</span>
+								<img src="img/contacts_line.png" >
+								<p>北京市昌平区站前东街二号回龙观田园风光综合商业楼3层邮编：100081</p>
+							</div>
+						</div>
+						<div class="con5-mm1">
+							<div class="con5-mm1-img"><img src="img/lianxi_icon02.png" ></div>
+							<div class="con5-mm1-cent">
+								<span>电话</span>
+								<img src="img/contacts_line.png" >
+								<p>总机：010-8888888</p>
+							</div>
+						</div>
+						<div class="con5-mm1">
+							<div class="con5-mm1-img"><img src="img/lianxi_icon03.png" ></div>
+							<div class="con5-mm1-cent">
+								<span>网络途径</span>
+								<img src="img/contacts_line.png" >
+								<p>邮箱:cp@feicuiedu.com<br>
+									微博：aaaaaaa_sina<br>
+									微信：ccccccc_weixin
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 地图 -->
+		<div class="ditu">
+			<img src="img/ttt.png" >
+		</div>
+		<!-- 尾部 -->
+		<footer>
+			<div class="foot">
+				<div class="quanzi">
+					<div class="quanzia">
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+					</div>
+					<div class="quanzib">
+						备案声明
+					</div>
+				</div>
+				<a class="celan1" href="javascript:;"></a>
+				<a class="celan2" href="javascript:;"></a>
+			</div>
+		</footer>
+	
+		
+	</body>
+</html>
